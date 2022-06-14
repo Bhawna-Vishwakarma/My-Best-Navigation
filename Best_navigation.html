@@ -1,0 +1,114 @@
+<!-- navigation using float , inline-block , flex -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dropdown</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#container ul{
+			list-style: none;
+			display: flex;
+		}
+		#container ul li{
+			background-color: #2f4d6f;
+			width: 200px;
+			height: 50px;
+			border: 1px solid #eee;
+			line-height: 50px;			
+			text-align: center;
+			/* display: inline-block; */
+			 vertical-align: top;     /*using for solution of inline-block overflow */
+			/* float: left; */
+			position: relative;
+		}
+		#container ul li a{
+			text-decoration: none;
+			text-transform: capitalize;
+			color: #eee;
+			font-size: 20px;
+		}
+		#container ul li:hover{
+			background-color: gray;
+		}
+		#container ul ul{
+			display: none;
+		}
+		#container ul li:hover>ul{  /*for all ul of ul li childs*/
+			display: block;
+		}
+		#container ul ul ul{
+			margin-left: 200px;
+			position: absolute;
+			top: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<ul>
+			<li><a href="">home</a></li>
+			<li><a href="">about</a>
+				<ul>
+					<li><a href="#">about1</a></li>
+					<li><a href="#">about2</a></li>
+					<li><a href="#">about3</a></li>
+					<li><a href="#">about4</a>
+						<ul>
+							<li><a href="#">sub_about1</a></li>
+							<li><a href="#">sub_about2</a></li>
+							<li><a href="#">sub_about3</a></li>
+							<li><a href="#">sub_about4</a></li>
+							<li><a href="#">sub_about5</a></li>
+							<li><a href="#">sub_about6</a></li>
+						</ul>
+					</li>
+					<li><a href="#">about5</a></li>
+					<li><a href="#">about6</a></li>
+				</ul>
+			</li>
+			<li><a href="#">services</a>
+				<ul>
+					<li><a href="#">help1</a></li>
+					<li><a href="#">help2</a></li>
+					<li><a href="#">help3</a></li>
+					<li><a href="#">help4</a>
+						<ul>
+							<li><a href="#">sub_help1</a></li>
+							<li><a href="#">sub_help2</a></li>
+							<li><a href="#">sub_help3</a></li>
+							<li><a href="#">sub_help4</a></li>
+							<li><a href="#">sub_help5</a></li>
+							<li><a href="#">sub_help6</a></li>
+						</ul>
+					</li>
+					<li><a href="#">help5</a></li>
+					<li><a href="#">help6</a></li>
+				</ul>
+			</li>
+			<li><a href="#">contact</a></li>
+			<li><a href="#">help</a>
+				<ul>
+					<li><a href="#">help1</a></li>
+					<li><a href="#">help2</a></li>
+					<li><a href="#">help3</a></li>
+					<li><a href="#">help4</a>
+						<ul>
+							<li><a href="#">sub_help1</a></li>
+							<li><a href="#">sub_help2</a></li>
+							<li><a href="#">sub_help3</a></li>
+							<li><a href="#">sub_help4</a></li>
+							<li><a href="#">sub_help5</a></li>
+							<li><a href="#">sub_help6</a></li>
+						</ul>
+					</li>
+					<li><a href="#">help5</a></li>
+					<li><a href="#">help6</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
